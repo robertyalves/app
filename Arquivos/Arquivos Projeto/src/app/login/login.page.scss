@@ -1,0 +1,15 @@
+:host {
+    ion-content {
+        --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+    }
+}
+
+.paz {
+    position: relative;
+    z-index: 10;
+}
+
+.img-login{
+    width:80px;
+    margin:0;
+}

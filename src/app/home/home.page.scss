@@ -1,0 +1,17 @@
+.welcome-card img {
+  max-height: 35vh;
+  overflow: hidden;
+}
+:host {
+  ion-content {
+      --background: linear-gradient(135deg, var(--ion-color-dark));
+  }
+}
+
+
+
+:host {
+  ion-content {
+     background: linear-gradient(180deg, rgb(255, 255, 255), rgb(99, 14, 121));
+  }
+}

@@ -1,0 +1,65 @@
+<ion-content padding class="animated fadeIn login auth-page">
+  <div class="theme-bg"></div>
+  <div class="auth-content">
+
+    <!-- Logo -->
+    <div padding-horizontal text-center class="animated fadeInDown">
+      <div class="logo"></div>
+      <h4 no-margin>
+          <p align="center"><ion-img class="img-login" src="../assets/img/01.png"></ion-img></p>
+        <ion-text color="light" class="fw400">
+          App Gastos
+         
+        </ion-text>
+
+        <br><br>
+       
+       </h4>
+    </div>
+
+    <!-- Login form -->
+    <div  class="list-form">
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="person" item-start></ion-icon>
+          Usuário
+        </ion-label>
+        <ion-input color="secondary" type="text" [(ngModel)]="usuario"></ion-input>
+      </ion-item>
+      <p ion-text class="text08">
+        <ion-text color="warning">
+          Campo Obrigatório
+        </ion-text>
+      </p>
+
+      <ion-item no-padding class="animated fadeInUp">
+        <ion-label position="floating">
+          <ion-icon name="lock" item-start></ion-icon>
+          Senha
+        </ion-label>
+        <ion-input color="secondary" type="password" [(ngModel)]="senha"></ion-input>
+      </ion-item>
+      <p ion-text color="warning" class="text08">
+        <ion-text color="warning">
+          Campo Obrigatório
+        </ion-text>
+        </p>
+      </div>
+
+    
+    <br><br>
+
+    <div>
+      <ion-button icon-left size="medium" expand="full" shape="round" color="dark" (click)="login()"  tappable>
+      
+        Entrar
+      </ion-button>
+
+     
+
+    </div>
+
+  
+
+  </div>
+</ion-content>

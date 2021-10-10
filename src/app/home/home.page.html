@@ -1,0 +1,29 @@
+<ion-header  >
+  <ion-toolbar  color="dark">
+    <ion-buttons slot="start" >
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <ion-title >
+      BEM VINDO! {{usuario}}
+    </ion-title>
+    <ion-buttons slot="end">
+    <ion-button color="tertiary"  (click)="logout()">
+      <ion-icon slot="end" name="log-out"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card">
+     
+      <ion-card-header>
+       
+        <ion-card-title>Tenha  o controle de seus gastos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Esse APP lhe ajudará a não esquecer de seus gastos,  voçê registrará  tudo e poderá sempre verificar o que gastou</p>
+      </ion-card-content>
+    </ion-card>
+  
+

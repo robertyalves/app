@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista Clientes</ion-title>
+    <ion-buttons slot="primary" (click)="addCliente()">
+      <ion-button color="primary">Novo
+        <ion-icon slot="end" name="add"></ion-icon>
+      </ion-button>
+     
+    </ion-buttons>
+    
+  </ion-toolbar>
+
+  
+
+</ion-header>
+
+<ion-row>
+    <ion-col size="9">
+        <ion-input [(ngModel)]="nome" type="search" placeholder="Buscar"></ion-input> 
+    </ion-col>
+    <ion-col>
+           <ion-buttons (click)="buscar()">
+            <ion-button>
+              <ion-icon slot="end" name="search"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          
+    </ion-col>
+    
+  </ion-row>
+
+
+     
+      
+              
+
+
+
+
+<ion-content padding>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          
+          refreshingSpinner="circles"
+          refreshingText="Carregando...">
+        </ion-refresher-content>
+      </ion-refresher>
+  
+
+<ion-list>
+    <!-- Sliding item with text options on both sides -->
+    <ion-item-sliding *ngFor="let cliente of clientes">
+      <ion-item-options side="start">
+        <ion-item-option (click)="editar(cliente.id, cliente.nome, cliente.telefone, cliente.email)">Editar</ion-item-option>
+       
+      </ion-item-options>
+  
+      <ion-item>
+        <ion-label>{{cliente.nome}}</ion-label>
+      </ion-item>
+  
+      <ion-item-options side="end">
+          <ion-item-option color="secondary" (click)="mostrar(cliente.id, cliente.nome, cliente.telefone, cliente.email)">Mostrar</ion-item-option>
+        <ion-item-option color="danger" (click)="excluir(cliente.id)">Excluir</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  
+    
+  </ion-list>
+
+
+  <ion-infinite-scroll  (ionInfinite)="loadData($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Carregando mais dados">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  
+  
+
+</ion-content>
